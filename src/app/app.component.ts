@@ -38,10 +38,21 @@ import { Component } from '@angular/core';
   <!-- Ders 7 -->
     
 
+  <!-- Ders 8 -->
+  <!-- <div *appCustomIf="true">if denemesi</div> -->
+
+<!-- <div *appCustomFor="10; let i = indexValue">Ommer1453 => {{i}}</div> -->
+
+<!-- <div *appCustomFor="names; let name; let index = i">{{name}} => {{index}}</div> -->
+
+<!-- Ders 8 -->
 
 
 
 
+<!-- Ders 9 -->
+
+<!-- Ders 9 -->
   
 
 
@@ -52,5 +63,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-angular-project';
   property_binding_2 = 'property-binding-2 input örneği';
-  
+  names = ['ömer','faruk','cetin','mf'];
 }

@@ -13,6 +13,8 @@ import { AttributeBindingComponent } from './attribute-binding/attribute-binding
 import { InterpolationSytaxComponent } from './interpolation-sytax/interpolation-sytax.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ExampleDirective } from './directives/example.directive';
+import { CustomForDirective } from './directives/custom-for.directive';
+import { CustomIfDirective } from './directives/custom-if.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ExampleDirective } from './directives/example.directive';
     AttributeBindingComponent,
     InterpolationSytaxComponent,
     DirectiveComponent,
-    ExampleDirective
+    ExampleDirective,
+    CustomForDirective,
+    CustomIfDirective
   ],
   imports: [
     BrowserModule,

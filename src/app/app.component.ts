@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   // templateUrl: './app.component.html',
   template: `
-    <app-home></app-home>
+
+
+
+  <!-- Ders 1-6 -->
+    <!-- <app-home></app-home>
 
     <app-property-binding></app-property-binding>
 
@@ -18,9 +22,29 @@ import { Component } from '@angular/core';
     
     <app-interpolation-sytax></app-interpolation-sytax>
     
-    <app-directive></app-directive>
+    <app-directive></app-directive> -->
+  <!-- Ders 1-6 -->
+ 
+  
 
+
+
+  <!-- Ders 7 -->
+<!--   
+<div appExample colorName='red'>Merhaba</div>
+
+<div class="appExample" >Merhaba</div> -->
+
+  <!-- Ders 7 -->
     
+
+
+
+
+
+  
+
+
     
   `,
   styleUrls: ['./app.component.scss'],

@@ -12,6 +12,7 @@ import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-
 import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
 import { InterpolationSytaxComponent } from './interpolation-sytax/interpolation-sytax.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ExampleDirective } from './directives/example.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DirectiveComponent } from './directive/directive.component';
     TwoWayDataBindingComponent,
     AttributeBindingComponent,
     InterpolationSytaxComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ExampleDirective
   ],
   imports: [
     BrowserModule,

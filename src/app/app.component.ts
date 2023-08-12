@@ -75,14 +75,25 @@ import { Component } from '@angular/core';
 
 
 
+<!-- Ders 11 -->
+
+<!-- <app-component-life-cycle-hooks [data]="title" [data2]="names"></app-component-life-cycle-hooks>
+
+<input type="text" [ngModel]="title"> -->
+
+<!-- Ders 11 -->
+
+
+
     
   `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
+  items: string[] = ['Item 1', 'Item 2', 'Item 2', 'Item 2', 'Item 2', 'Item 2', 'Item 2'];
 
   title = 'my-angular-project';
   property_binding_2 = 'property-binding-2 input örneği';
   names = ['ömer','faruk','cetin','mf'];
+  
 }

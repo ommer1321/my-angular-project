@@ -15,6 +15,7 @@ import { DirectiveComponent } from './directive/directive.component';
 import { ExampleDirective } from './directives/example.directive';
 import { CustomForDirective } from './directives/custom-for.directive';
 import { CustomIfDirective } from './directives/custom-if.directive';
+import { CustomPipe } from './Pipes/custom.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CustomIfDirective } from './directives/custom-if.directive';
     DirectiveComponent,
     ExampleDirective,
     CustomForDirective,
-    CustomIfDirective
+    CustomIfDirective,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,9 @@ import { CustomIfDirective } from './directives/custom-if.directive';
     // kural-1453 two-way-data-binding için eklendi
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CustomPipe,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

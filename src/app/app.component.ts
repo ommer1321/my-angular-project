@@ -51,9 +51,27 @@ import { Component } from '@angular/core';
 
 
 <!-- Ders 9 -->
+<!-- 
+<div> {{title | titlecase}} </div>
+<div> {{title | slice : 2 : 10}} </div>
+
+<div> {{30.04.2000 | date : 'fullDate'}} </div>
+<div> {{30.04.2000 | date : 'dd.mm.yyyy'}} </div> -->
+
+<!-- <h1>{{5 |custom :5}}</h1> -->
 
 <!-- Ders 9 -->
   
+
+
+<!-- Ders 10 -->
+
+
+<!-- Ders 10 -->
+
+
+
+
 
 
     
@@ -61,6 +79,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
+
   title = 'my-angular-project';
   property_binding_2 = 'property-binding-2 input örneği';
   names = ['ömer','faruk','cetin','mf'];

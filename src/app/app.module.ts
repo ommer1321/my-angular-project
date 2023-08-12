@@ -16,6 +16,11 @@ import { ExampleDirective } from './directives/example.directive';
 import { CustomForDirective } from './directives/custom-for.directive';
 import { CustomIfDirective } from './directives/custom-if.directive';
 import { CustomPipe } from './Pipes/custom.pipe';
+import { Child1Component } from './components/child_to_parent/child1/child1.component';
+import { Parent1Component } from './components/parent_to_child/parent1/parent1.component';
+import { Ch1Component } from './components/child_to_child/ch1/ch1.component';
+import { Ch2Component } from './components/child_to_child/ch2/ch2.component';
+import { PrComponent } from './components/child_to_child/pr/pr.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { CustomPipe } from './Pipes/custom.pipe';
     ExampleDirective,
     CustomForDirective,
     CustomIfDirective,
-    CustomPipe
+    CustomPipe,
+    Child1Component,
+    Parent1Component,
+    Ch1Component,
+    Ch2Component,
+    PrComponent
   ],
   imports: [
     BrowserModule,

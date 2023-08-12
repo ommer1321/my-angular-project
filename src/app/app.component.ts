@@ -66,10 +66,11 @@ import { Component } from '@angular/core';
 
 <!-- Ders 10 -->
 
+<!-- <app-parent1></app-parent1> -->
+
+<!-- <app-pr></app-pr> -->
 
 <!-- Ders 10 -->
-
-
 
 
 

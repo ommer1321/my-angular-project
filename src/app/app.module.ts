@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { PropertyBinding2Component } from './property-binding2/property-binding2.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
 import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
 import { InterpolationSytaxComponent } from './interpolation-sytax/interpolation-sytax.component';
@@ -23,6 +23,7 @@ import { Ch2Component } from './components/child_to_child/ch2/ch2.component';
 import { PrComponent } from './components/child_to_child/pr/pr.component';
 import { ComponentLifeCycleHooksComponent } from './component-life-cycle-hooks/component-life-cycle-hooks.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +46,15 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     Ch2Component,
     PrComponent,
     ComponentLifeCycleHooksComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ModelDrivenFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // kural-1453 two-way-data-binding için eklendi
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CustomPipe,

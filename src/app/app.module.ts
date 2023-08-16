@@ -22,6 +22,7 @@ import { Ch1Component } from './components/child_to_child/ch1/ch1.component';
 import { Ch2Component } from './components/child_to_child/ch2/ch2.component';
 import { PrComponent } from './components/child_to_child/pr/pr.component';
 import { ComponentLifeCycleHooksComponent } from './component-life-cycle-hooks/component-life-cycle-hooks.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ComponentLifeCycleHooksComponent } from './component-life-cycle-hooks/c
     Ch1Component,
     Ch2Component,
     PrComponent,
-    ComponentLifeCycleHooksComponent
+    ComponentLifeCycleHooksComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,

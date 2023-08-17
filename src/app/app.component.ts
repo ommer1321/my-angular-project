@@ -95,6 +95,17 @@ import { Component } from '@angular/core';
 <!-- <app-model-driven-form></app-model-driven-form> -->
 <!-- Ders 14  -->
 
+
+
+<!-- Ders 16  -->
+<app-built-in-validations></app-built-in-validations>
+
+
+<!-- Ders 16  -->
+
+
+
+
     
   `,
   styleUrls: ['./app.component.scss'],

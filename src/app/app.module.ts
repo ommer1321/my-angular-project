@@ -24,6 +24,7 @@ import { PrComponent } from './components/child_to_child/pr/pr.component';
 import { ComponentLifeCycleHooksComponent } from './component-life-cycle-hooks/component-life-cycle-hooks.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
+import { BuiltInValidationsComponent } from './validations/built-in-validations/built-in-validations.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.
     PrComponent,
     ComponentLifeCycleHooksComponent,
     TemplateDrivenFormComponent,
-    ModelDrivenFormComponent
+    ModelDrivenFormComponent,
+    BuiltInValidationsComponent
   ],
   imports: [
     BrowserModule,

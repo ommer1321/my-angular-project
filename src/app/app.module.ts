@@ -29,6 +29,7 @@ import { Video1Component } from './Dependency_Injection/video1/video1.component'
 import { Product } from './Dependency_Injection/product';
 import { ProductService } from './Dependency_Injection/product-service';
 import { Video2Component } from './Dependency_Injection/video2/video2.component';
+import { LoggerService } from './example-classes/logger-service';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { Video2Component } from './Dependency_Injection/video2/video2.component'
 
     // Dependency Injection için bu modüle eklendiler
     Product,
-    ProductService
+    ProductService,
+    LoggerService  
     
   ],
   bootstrap: [AppComponent]

@@ -110,9 +110,15 @@ import { Component } from '@angular/core';
 <!-- <app-video1></app-video1> -->
 <!-- Ders 17 -->
 
+
+<!-- Ders 18 -->
+<app-video2></app-video2>
+
+<!-- Ders 18 -->
+
     
   `,
-  styleUrls: ['./app.component.scss'],
+  styleUrls: [],
 })
 export class AppComponent {
   items: string[] = ['Item 1', 'Item 2', 'Item 2', 'Item 2', 'Item 2', 'Item 2', 'Item 2'];

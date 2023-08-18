@@ -112,10 +112,13 @@ import { Component } from '@angular/core';
 
 
 <!-- Ders 18 -->
-<app-video2></app-video2>
-
+<!-- <app-video2></app-video2> -->
 <!-- Ders 18 -->
 
+
+<!-- Ders 19 -->
+<!-- <app-video3></app-video3> -->
+<!-- Ders 19 -->
     
   `,
   styleUrls: [],

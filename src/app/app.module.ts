@@ -29,7 +29,11 @@ import { Video1Component } from './Dependency_Injection/video1/video1.component'
 import { Product } from './Dependency_Injection/product';
 import { ProductService } from './Dependency_Injection/product-service';
 import { Video2Component } from './Dependency_Injection/video2/video2.component';
-import { LoggerService } from './example-classes/logger-service';
+import { A, B, C, LoggerService } from './example-classes/logger-service';
+import { Video3Component } from './Dependency_Injection/video3/video3.component';
+import { logServiceIT } from './injection-token';
+import { HttpClientModule } from '@angular/common/http'; // HttpClientModule'ı import ediyoruz
+import { HttpClient } from '@angular/common/http'; // HttpClient'ı import ediyoruz
 
 @NgModule({
   declarations: [
@@ -56,14 +60,17 @@ import { LoggerService } from './example-classes/logger-service';
     ModelDrivenFormComponent,
     BuiltInValidationsComponent,
     Video1Component,
-    Video2Component
+    Video2Component,
+    Video3Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // HttpClient için eklendi
+    HttpClientModule,
     // kural-1453 two-way-data-binding için eklendi
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     CustomPipe,
@@ -71,9 +78,41 @@ import { LoggerService } from './example-classes/logger-service';
     // Dependency Injection için bu modüle eklendiler
     Product,
     ProductService,
-    LoggerService  
-    
+
+    //***DI Tanımlama Şekilleri
+    // LoggerService  //DI Token - Default Type Token
+    // {provide:LoggerService,useClass:LoggerService} // Type Token ( Bu şekilde tanımlamada ilk parametre provide ettiğimiz sınıftan ilk yaptığımız şekildeki gibi referans alarak kullanılıyor ikinci parametrede provide edilmek istenen sınıf  )
+    // {provide:'ommer1453',useClass:LoggerService} // String Token
+    { provide: logServiceIT, useClass: LoggerService }, //Injection  Token (injection-token.ts sayfasında toplu olarak tanımlarız)
+
+    // ***Provider Türleri
+
+    // {provide:Product,useClass:Product} // Sınıf Provider'ı
+    // {provide:'URL',useValue:'www.asyazilim.online'} // Metinsel Provider'ı (useValue direk fonksiyonu veya veeriyi getirir result'u getirmez işlemi ilgili sayfada yapar)
+    // {provide:'URL',useValue:()=>{let a:number = 1453; return 'www.asyazilim.online'+a;}}  // Fonksiyon Provider'ı (useValue direk fonksiyonu veya veeriyi getirir result'u getirmez işlemi ilgili sayfada yapar)
+
+    // kural-1453
+    // Şimdi burda provide tanımladıktan sonra useFactory içine fonksiyon tanımlıyoruz veiçinde istediğimiz hertürlü fonksiyonel parametrik herşeyi gerçekleştirebiliyoruz
+    // aynı zamanda deps ile dependicy'leri tanımlayabiliyoruz (yani parametrelerimizi) ve return olarak inject etmek istediğimiz sınıfı dönüyoruz yada dönmesek sadece işlem gerçekleştirsekte olur
+    //
+    //
+    // {
+    //   provide: "useFactory_provider", //Factory Provider'ı
+    //   useFactory: (httpClient: HttpClient) => {
+    //     const api_data = httpClient
+    //       .get("https://jsonplaceholder.org/users")
+    //       .subscribe({ next: (data) => console.log(data) });
+    //       return new LoggerService();
+    //   },
+    //   deps: [HttpClient],
+    // },
+    // *********
+    //  A,
+    //  {provide:B,useClass:A},
+    //  {provide:C,useExisting:B} //Aliased Class Provider
+
+
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

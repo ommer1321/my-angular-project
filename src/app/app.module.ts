@@ -25,6 +25,10 @@ import { ComponentLifeCycleHooksComponent } from './component-life-cycle-hooks/c
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 import { BuiltInValidationsComponent } from './validations/built-in-validations/built-in-validations.component';
+import { Video1Component } from './Dependency_Injection/video1/video1.component';
+import { Product } from './Dependency_Injection/product';
+import { ProductService } from './Dependency_Injection/product-service';
+import { Video2Component } from './Dependency_Injection/video2/video2.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,9 @@ import { BuiltInValidationsComponent } from './validations/built-in-validations/
     ComponentLifeCycleHooksComponent,
     TemplateDrivenFormComponent,
     ModelDrivenFormComponent,
-    BuiltInValidationsComponent
+    BuiltInValidationsComponent,
+    Video1Component,
+    Video2Component
   ],
   imports: [
     BrowserModule,
@@ -60,6 +66,11 @@ import { BuiltInValidationsComponent } from './validations/built-in-validations/
   ],
   providers: [
     CustomPipe,
+
+    // Dependency Injection için bu modüle eklendiler
+    Product,
+    ProductService
+    
   ],
   bootstrap: [AppComponent]
 })

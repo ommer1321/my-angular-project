@@ -98,13 +98,17 @@ import { Component } from '@angular/core';
 
 
 <!-- Ders 16  -->
-<app-built-in-validations></app-built-in-validations>
+<!-- <app-built-in-validations></app-built-in-validations> -->
 
 
 <!-- Ders 16  -->
 
 
 
+
+<!-- Ders 17  -->
+<!-- <app-video1></app-video1> -->
+<!-- Ders 17 -->
 
     
   `,

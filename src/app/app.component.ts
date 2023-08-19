@@ -120,6 +120,12 @@ import { Component } from '@angular/core';
 <!-- <app-video3></app-video3> -->
 <!-- Ders 19 -->
     
+
+<!-- Ders 20  -->
+<app-self-decorator></app-self-decorator>
+<!-- <app-comp3></app-comp3> -->
+<!-- Ders 20  -->
+
   `,
   styleUrls: [],
 })

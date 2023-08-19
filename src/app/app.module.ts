@@ -33,7 +33,11 @@ import { A, B, C, LoggerService } from './example-classes/logger-service';
 import { Video3Component } from './Dependency_Injection/video3/video3.component';
 import { logServiceIT } from './injection-token';
 import { HttpClientModule } from '@angular/common/http'; // HttpClientModule'ı import ediyoruz
-import { HttpClient } from '@angular/common/http'; // HttpClient'ı import ediyoruz
+import { HttpClient } from '@angular/common/http';
+import { SelfDecoratorComponent } from './decorators/self-decorator/self-decorator.component';
+import { Comp1Component } from './decorators/comp1/comp1.component';
+import { Comp2Component } from './decorators/comp2/comp2.component';
+import { Comp3Component } from './decorators/comp3/comp3.component'; // HttpClient'ı import ediyoruz
 
 @NgModule({
   declarations: [
@@ -62,6 +66,10 @@ import { HttpClient } from '@angular/common/http'; // HttpClient'ı import ediyo
     Video1Component,
     Video2Component,
     Video3Component,
+    SelfDecoratorComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +82,8 @@ import { HttpClient } from '@angular/common/http'; // HttpClient'ı import ediyo
   ],
   providers: [
     CustomPipe,
+    // Comp1Component,
+  
 
     // Dependency Injection için bu modüle eklendiler
     Product,

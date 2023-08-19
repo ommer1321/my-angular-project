@@ -37,7 +37,9 @@ import { HttpClient } from '@angular/common/http';
 import { SelfDecoratorComponent } from './decorators/self-decorator/self-decorator.component';
 import { Comp1Component } from './decorators/comp1/comp1.component';
 import { Comp2Component } from './decorators/comp2/comp2.component';
-import { Comp3Component } from './decorators/comp3/comp3.component'; // HttpClient'ı import ediyoruz
+import { Comp3Component } from './decorators/comp3/comp3.component';
+import { CreateProductComponent } from './example-product/create-product/create-product.component';
+import { ReadProductComponent } from './example-product/read-product/read-product.component'; // HttpClient'ı import ediyoruz
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import { Comp3Component } from './decorators/comp3/comp3.component'; // HttpClie
     Comp1Component,
     Comp2Component,
     Comp3Component,
+    CreateProductComponent,
+    ReadProductComponent,
   ],
   imports: [
     BrowserModule,

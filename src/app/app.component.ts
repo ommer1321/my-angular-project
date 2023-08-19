@@ -122,9 +122,25 @@ import { Component } from '@angular/core';
     
 
 <!-- Ders 20  -->
-<app-self-decorator></app-self-decorator>
+<!-- <app-self-decorator></app-self-decorator> -->
 <!-- <app-comp3></app-comp3> -->
 <!-- Ders 20  -->
+
+
+
+<!-- Ders 21  -->
+<!-- <app-create-product></app-create-product>
+<hr>
+<app-read-product></app-read-product> -->
+<!-- Ders 21  -->
+
+
+
+
+
+
+
+
 
   `,
   styleUrls: [],

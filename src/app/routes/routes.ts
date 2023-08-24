@@ -16,12 +16,22 @@ import { ErrorPageComponent } from '../errors/error-page/error-page.component';
 //
 //<router-outlet></router-outlet> sayesinde route ile gittiğimiz componentleri cağırabiliyoruz
 //
+// 
+// *4
+// burada : ile parametre tanımladık ve angularda null ozelliği olmadığı için parametre gelmesi zorunlu olacaktır aksi takdirde o route içine ulaşamıyacaktır
+// 
+// 
+// 
+
+
+
 
 export const routes: Routes = [
   // *1
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // *2
   { path: 'products', component: ReadProductComponent },
+  // *4
   { path: 'products/:id', component: ReadProductComponent },
   
   { path: 'product/create', component: CreateProductComponent },

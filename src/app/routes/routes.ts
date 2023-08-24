@@ -22,7 +22,10 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // *2
   { path: 'products', component: ReadProductComponent },
+  { path: 'products/:id', component: ReadProductComponent },
+  
   { path: 'product/create', component: CreateProductComponent },
+
   // *3
   { path: '**', component: ErrorPageComponent },
 ];

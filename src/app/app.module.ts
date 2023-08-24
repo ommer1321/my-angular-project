@@ -48,6 +48,7 @@ import { ParentProductComponent } from './parent-child/parent-product/parent-pro
 import { ParentChild1Component } from './parent-child/parent-child1/parent-child1.component';
 import { ParentChild2Component } from './parent-child/parent-child2/parent-child2.component';
 import { ParentChild3Component } from './parent-child/parent-child3/parent-child3.component';
+import { QueryStringComponent } from './query-string/query-string.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +87,7 @@ import { ParentChild3Component } from './parent-child/parent-child3/parent-child
     ParentChild1Component,
     ParentChild2Component,
     ParentChild3Component,
+    QueryStringComponent,
   ],
   imports: [
     BrowserModule,

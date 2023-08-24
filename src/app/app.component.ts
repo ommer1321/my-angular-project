@@ -152,6 +152,9 @@ import { Component } from '@angular/core';
 <router-outlet></router-outlet> -->
 <!-- Ders 25 -->
 
+<!-- Ders 26 -->
+<app-query-string></app-query-string>
+<!-- Ders 26 -->
 
 
 

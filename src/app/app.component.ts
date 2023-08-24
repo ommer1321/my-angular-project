@@ -135,7 +135,15 @@ import { Component } from '@angular/core';
 <!-- Ders 21  -->
 
 
+<!-- Ders 22 -->
 
+<!--  bu bizim normal routerLink kullanımımız |   routerLinkActive sayeesinde aktif olduğumuz url e css tanımlayabiliyoruz  -->
+<a routerLink="products" routerLinkActive="activeLink">Products</a> |
+<!-- bu bizim array şeklinde olan routerLink kullanımımız -->
+<a [routerLink]="['product','create']"  routerLinkActive="activeLink">Create</a>
+<hr>
+<router-outlet></router-outlet>
+<!-- Ders 22 -->
 
 
 
@@ -143,6 +151,7 @@ import { Component } from '@angular/core';
 
 
   `,
+  styles:[".activeLink{color:orange}"],
   styleUrls: [],
 })
 export class AppComponent {

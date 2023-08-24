@@ -40,7 +40,10 @@ import { Comp2Component } from './decorators/comp2/comp2.component';
 import { Comp3Component } from './decorators/comp3/comp3.component';
 import { CreateProductComponent } from './example-product/create-product/create-product.component';
 import { ReadProductComponent } from './example-product/read-product/read-product.component'; // HttpClient'ı import ediyoruz
-
+import { RouterModule } from '@angular/router';
+import { routes } from './routes/routes';// Bu bizim custom oluşturduğumuz route
+import { ErrorPageComponent } from './errors/error-page/error-page.component' // Bu bizim custom oluşturduğumuz errorPage Sayfası 
+import { APP_BASE_HREF } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,10 +77,12 @@ import { ReadProductComponent } from './example-product/read-product/read-produc
     Comp3Component,
     CreateProductComponent,
     ReadProductComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(routes), // Bu bizim custom oluşturduğumuz route | {useHash:true} ile urlde # ile çaışıyor program
     // HttpClient için eklendi
     HttpClientModule,
     // kural-1453 two-way-data-binding için eklendi
@@ -85,6 +90,7 @@ import { ReadProductComponent } from './example-product/read-product/read-produc
     ReactiveFormsModule,
   ],
   providers: [
+
     CustomPipe,
     // Comp1Component,
   
@@ -124,6 +130,9 @@ import { ReadProductComponent } from './example-product/read-product/read-produc
     //  A,
     //  {provide:B,useClass:A},
     //  {provide:C,useExisting:B} //Aliased Class Provider
+
+    // kural-1453
+    // {provide:APP_BASE_HREF,useValue:'ommer1453'}, //Bunun sayesinde uygulamaya prefix verebiliyoruz
 
 
   ],

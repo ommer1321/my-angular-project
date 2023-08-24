@@ -138,13 +138,19 @@ import { Component } from '@angular/core';
 <!-- Ders 22 -->
 
 <!--  bu bizim normal routerLink kullanımımız |   routerLinkActive sayeesinde aktif olduğumuz url e css tanımlayabiliyoruz  -->
-<a routerLink="products" routerLinkActive="activeLink">Products</a> |
+<!-- <a routerLink="products" routerLinkActive="activeLink">Products</a> | -->
 <!-- bu bizim array şeklinde olan routerLink kullanımımız -->
-<a [routerLink]="['product','create']"  routerLinkActive="activeLink">Create</a>
-<hr>
-<router-outlet></router-outlet>
+<!-- <a [routerLink]="['product','create']"  routerLinkActive="activeLink">Create</a> -->
+<!-- <hr> -->
+<!-- <router-outlet></router-outlet> -->
 <!-- Ders 22 -->
 
+
+<!-- Ders 25 -->
+<!-- <a style="color: blue;" routerLink="parent-product">Parent Component</a> 
+<hr>
+<router-outlet></router-outlet> -->
+<!-- Ders 25 -->
 
 
 

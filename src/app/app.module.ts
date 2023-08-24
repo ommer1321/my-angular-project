@@ -44,6 +44,10 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';// Bu bizim custom oluşturduğumuz route
 import { ErrorPageComponent } from './errors/error-page/error-page.component' // Bu bizim custom oluşturduğumuz errorPage Sayfası 
 import { APP_BASE_HREF } from '@angular/common';
+import { ParentProductComponent } from './parent-child/parent-product/parent-product.component';
+import { ParentChild1Component } from './parent-child/parent-child1/parent-child1.component';
+import { ParentChild2Component } from './parent-child/parent-child2/parent-child2.component';
+import { ParentChild3Component } from './parent-child/parent-child3/parent-child3.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +82,10 @@ import { APP_BASE_HREF } from '@angular/common';
     CreateProductComponent,
     ReadProductComponent,
     ErrorPageComponent,
+    ParentProductComponent,
+    ParentChild1Component,
+    ParentChild2Component,
+    ParentChild3Component,
   ],
   imports: [
     BrowserModule,

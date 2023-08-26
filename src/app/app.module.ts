@@ -51,6 +51,8 @@ import { ParentChild3Component } from './parent-child/parent-child3/parent-child
 import { QueryStringComponent } from './query-string/query-string.component';
 import { ExampleCompComponent } from './guards/example-comp/example-comp.component';
 import { ExampleFailCompComponent } from './guards/example-fail-comp/example-fail-comp.component';
+import { DataPassingComponent } from './data-passing/data-passing.component';
+import { RouterEventsComponent } from './router-events/router-events.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,6 +94,8 @@ import { ExampleFailCompComponent } from './guards/example-fail-comp/example-fai
     QueryStringComponent,
     ExampleCompComponent,
     ExampleFailCompComponent,
+    DataPassingComponent,
+    RouterEventsComponent,
   ],
   imports: [
     BrowserModule,

@@ -153,8 +153,15 @@ import { Component } from '@angular/core';
 <!-- Ders 25 -->
 
 <!-- Ders 26 -->
-<app-query-string></app-query-string>
+<!-- <app-query-string></app-query-string> -->
 <!-- Ders 26 -->
+
+<!-- Ders 27 -->
+<a routerLink="guard-yes" >Erişim izni al</a>
+<hr>
+<router-outlet></router-outlet>
+
+<!-- Ders 27 -->
 
 
 

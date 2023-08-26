@@ -7,6 +7,11 @@ import { ParentProductComponent } from '../parent-child/parent-product/parent-pr
 import { ParentChild1Component } from '../parent-child/parent-child1/parent-child1.component';
 import { ParentChild2Component } from '../parent-child/parent-child2/parent-child2.component';
 import { ParentChild3Component } from '../parent-child/parent-child3/parent-child3.component';
+import { ExampleCompComponent } from '../guards/example-comp/example-comp.component';
+import { ExampleFailCompComponent } from '../guards/example-fail-comp/example-fail-comp.component';
+import { canActivateGuard } from '../guards/can-activate.guard';
+import { canActivateChildGuard } from '../guards/can-activate-child.guard';
+import { canDeactivateGuard } from '../guards/can-deactivate.guard';
 //kural-1453
 //  Bu bizim custom oluşturduğumuz routes sayfasıdır
 //Biz bu sayfayı kullana bilmemiz için app.module.ts icindeki  imports: kısmına bu sayfayı tanımlamamız gerek şu şekilde => RouterModule.forRoot(routes) <= ve bunun içindeki routes'u da yani bunu sayfayıda sayfa içine import etmemiz lazım
@@ -65,6 +70,19 @@ export const routes: Routes = [
       },
     ],
   },
+
+
+  { path: 'guard-yes', component: ExampleCompComponent ,
+  canActivate:[canActivateGuard],
+  canActivateChild:[canActivateChildGuard],
+  canDeactivate:[canDeactivateGuard],//Bu Çalışmadı
+  children:[
+    { path: 'guard-child', component: ParentChild3Component },
+
+  ]},
+  { path: 'guard-no', component: ExampleFailCompComponent },
+
+
 
   // *3
   { path: '**', component: ErrorPageComponent },

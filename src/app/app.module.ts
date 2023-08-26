@@ -49,6 +49,8 @@ import { ParentChild1Component } from './parent-child/parent-child1/parent-child
 import { ParentChild2Component } from './parent-child/parent-child2/parent-child2.component';
 import { ParentChild3Component } from './parent-child/parent-child3/parent-child3.component';
 import { QueryStringComponent } from './query-string/query-string.component';
+import { ExampleCompComponent } from './guards/example-comp/example-comp.component';
+import { ExampleFailCompComponent } from './guards/example-fail-comp/example-fail-comp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +90,8 @@ import { QueryStringComponent } from './query-string/query-string.component';
     ParentChild2Component,
     ParentChild3Component,
     QueryStringComponent,
+    ExampleCompComponent,
+    ExampleFailCompComponent,
   ],
   imports: [
     BrowserModule,

@@ -157,14 +157,24 @@ import { Component } from '@angular/core';
 <!-- Ders 26 -->
 
 <!-- Ders 27 -->
-<a routerLink="guard-yes" >Erişim izni al</a>
+<!-- <a routerLink="guard-yes" >Erişim izni al</a>
 <hr>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
 <!-- Ders 27 -->
 
+<!-- Ders  30 -->
+hi can <br> 
+<a routerLink="user/add">Add User</a> |
+<a routerLink="user/update">Update User</a> |
+<a routerLink="user/delete">Delete User</a> |
+<a routerLink="category/add">Add Category</a> |
+<a routerLink="category/delete">Delete Category</a> |
+<a routerLink="category/update">Update Category</a> |
 
+<router-outlet></router-outlet> 
 
+<!-- Ders  30 -->
 
   `,
   styles:[".activeLink{color:orange}"],

@@ -53,6 +53,13 @@ import { ExampleCompComponent } from './guards/example-comp/example-comp.compone
 import { ExampleFailCompComponent } from './guards/example-fail-comp/example-fail-comp.component';
 import { DataPassingComponent } from './data-passing/data-passing.component';
 import { RouterEventsComponent } from './router-events/router-events.component';
+
+// import { AddUserComponent } from './example-modules/user-module/add-user/add-user.component';
+// import { DeleteCategoryComponent } from './example-modules/category-module/delete-category/delete-category.component';
+// import { AddCategoryComponent } from './example-modules/category-module/add-category/add-category.component';
+// import { UpdateCategoryComponent } from './example-modules/category-module/update-category/update-category.component';
+// import { UpdateUserComponent } from './example-modules/user-module/update-user/update-user.component';
+// import { DeleteUserComponent } from './example-modules/user-module/delete-user/delete-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,6 +103,13 @@ import { RouterEventsComponent } from './router-events/router-events.component';
     ExampleFailCompComponent,
     DataPassingComponent,
     RouterEventsComponent,
+    
+    // AddUserComponent,
+    // UpdateUserComponent,
+    // DeleteUserComponent,
+    // DeleteCategoryComponent,
+    // AddCategoryComponent,
+    // UpdateCategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,6 +121,11 @@ import { RouterEventsComponent } from './router-events/router-events.component';
     FormsModule,
     ReactiveFormsModule,
   ],
+
+  exports:[
+    RouterModule
+  ],
+
   providers: [
 
     CustomPipe,

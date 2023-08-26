@@ -13,6 +13,16 @@ import { canActivateGuard } from '../guards/can-activate.guard';
 import { canActivateChildGuard } from '../guards/can-activate-child.guard';
 import { canDeactivateGuard } from '../guards/can-deactivate.guard';
 import { DataPassingComponent } from '../data-passing/data-passing.component';
+
+
+
+// import { AddUserComponent } from '../example-modules/user-module/add-user/add-user.component';
+// import { UpdateUserComponent } from '../example-modules/user-module/update-user/update-user.component';
+// import { DeleteUserComponent } from '../example-modules/user-module/delete-user/delete-user.component';
+// import { AddCategoryComponent } from '../example-modules/category-module/add-category/add-category.component';
+// import { UpdateCategoryComponent } from '../example-modules/category-module/update-category/update-category.component';
+// import { DeleteCategoryComponent } from '../example-modules/category-module/delete-category/delete-category.component';
+
 //kural-1453
 //  Bu bizim custom oluşturduğumuz routes sayfasıdır
 //Biz bu sayfayı kullana bilmemiz için app.module.ts icindeki  imports: kısmına bu sayfayı tanımlamamız gerek şu şekilde => RouterModule.forRoot(routes) <= ve bunun içindeki routes'u da yani bunu sayfayıda sayfa içine import etmemiz lazım
@@ -39,8 +49,11 @@ import { DataPassingComponent } from '../data-passing/data-passing.component';
 //
 //
 //
-//
-//
+//*6
+// Modüler routes yapmak için  buradaki gibi lazy loader kullanıyoruz ve sadece bizim cağırdığımız component yükleniyor bu sayede 
+// normal şartlarda modüler oluşturulmadığı takdirde tüm routes yüklenir  
+// 
+// path içine altında listeleyeceğimiz ana route'u mesela burda 'user' yada 'category' yazıyoruz import içine modülümüzün yolunu tanımlıyoruz ve then içine importta eklediğimizi pathdeki modulelümüzün sınıfını ekliyoruz
 //
 //
 //
@@ -56,7 +69,8 @@ export const routes: Routes = [
   { path: 'product/create', component: CreateProductComponent },
 
   {
-    path: 'data-passing', component: DataPassingComponent,
+    path: 'data-passing',
+    component: DataPassingComponent,
     data: { key1: 'ommer', key2: 1453 },
   },
   // *5
@@ -85,6 +99,28 @@ export const routes: Routes = [
     children: [{ path: 'guard-child', component: ParentChild3Component }],
   },
   { path: 'guard-no', component: ExampleFailCompComponent },
+
+
+//module path 
+  
+// { path: 'user/add', component: AddUserComponent },
+// { path: 'user/update', component: UpdateUserComponent },
+// { path: 'user/delete', component: DeleteUserComponent },
+
+// { path: 'category/add', component: AddCategoryComponent },
+// { path: 'category/update', component: UpdateCategoryComponent },
+// { path: 'category/delete', component: DeleteCategoryComponent },
+
+// -----------
+
+// *6
+{ path: 'user', loadChildren:() =>import("../example-modules/user-module/user-module.module").then(m =>m.UserModuleModule) },
+{ path: 'category', loadChildren:() =>import("../example-modules/category-module/category-module.module").then(m =>m.CategoryModuleModule) },
+
+
+
+// 
+
 
   // *3
   { path: '**', component: ErrorPageComponent },

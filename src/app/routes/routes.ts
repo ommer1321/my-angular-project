@@ -14,8 +14,6 @@ import { canActivateChildGuard } from '../guards/can-activate-child.guard';
 import { canDeactivateGuard } from '../guards/can-deactivate.guard';
 import { DataPassingComponent } from '../data-passing/data-passing.component';
 
-
-
 // import { AddUserComponent } from '../example-modules/user-module/add-user/add-user.component';
 // import { UpdateUserComponent } from '../example-modules/user-module/update-user/update-user.component';
 // import { DeleteUserComponent } from '../example-modules/user-module/delete-user/delete-user.component';
@@ -50,12 +48,17 @@ import { DataPassingComponent } from '../data-passing/data-passing.component';
 //
 //
 //*6
-// Modüler routes yapmak için  buradaki gibi lazy loader kullanıyoruz ve sadece bizim cağırdığımız component yükleniyor bu sayede 
-// normal şartlarda modüler oluşturulmadığı takdirde tüm routes yüklenir  
-// 
+// Modüler routes yapmak için  buradaki gibi lazy loader kullanıyoruz ve sadece bizim cağırdığımız component yükleniyor bu sayede
+// normal şartlarda modüler oluşturulmadığı takdirde tüm routes yüklenir
+//
 // path içine altında listeleyeceğimiz ana route'u mesela burda 'user' yada 'category' yazıyoruz import içine modülümüzün yolunu tanımlıyoruz ve then içine importta eklediğimizi pathdeki modulelümüzün sınıfını ekliyoruz
 //
-//
+
+// *8
+// burada daha önce oluşturduğumuz lazy loaader modullerinin pathleri bulunmaktadır zaten bu işlemi yapabilmek için ilk olarak lazy loader yapmış olmamaız lazım  preloading yapacağımız modüllere 
+//  lazy loader yaptıktan sonra her bir path için bir data passing parametresi oluşturuyoruz anlamlı olması için preload adında oluşturduk ve true veya false değer atadık 
+// bu işlemi yaptıktan sonra geri geldiğiniz custom-preload-strategy sayfasına geri gidiniz
+// => custom-preload-strategy sayfasına gidiniz
 //
 
 export const routes: Routes = [
@@ -100,27 +103,39 @@ export const routes: Routes = [
   },
   { path: 'guard-no', component: ExampleFailCompComponent },
 
+  //module path
 
-//module path 
-  
-// { path: 'user/add', component: AddUserComponent },
-// { path: 'user/update', component: UpdateUserComponent },
-// { path: 'user/delete', component: DeleteUserComponent },
+  // { path: 'user/add', component: AddUserComponent },
+  // { path: 'user/update', component: UpdateUserComponent },
+  // { path: 'user/delete', component: DeleteUserComponent },
 
-// { path: 'category/add', component: AddCategoryComponent },
-// { path: 'category/update', component: UpdateCategoryComponent },
-// { path: 'category/delete', component: DeleteCategoryComponent },
+  // { path: 'category/add', component: AddCategoryComponent },
+  // { path: 'category/update', component: UpdateCategoryComponent },
+  // { path: 'category/delete', component: DeleteCategoryComponent },
 
-// -----------
+  // -----------
 
-// *6
-{ path: 'user', loadChildren:() =>import("../example-modules/user-module/user-module.module").then(m =>m.UserModuleModule) },
-{ path: 'category', loadChildren:() =>import("../example-modules/category-module/category-module.module").then(m =>m.CategoryModuleModule) },
+  // *6
+  {
+    path: 'user',
+    loadChildren: () =>
+      import('../example-modules/user-module/user-module.module').then(
+        (m) => m.UserModuleModule
+      ),
+      // *8
+    data: { preload: true },
+  },
+  {
+    path: 'category',
+    loadChildren: () =>
+      import('../example-modules/category-module/category-module.module').then(
+        (m) => m.CategoryModuleModule
+      ),
+      // *8
+    data: { preload: false },
+  },
 
-
-
-// 
-
+  //
 
   // *3
   { path: '**', component: ErrorPageComponent },

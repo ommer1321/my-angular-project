@@ -53,6 +53,7 @@ import { ExampleCompComponent } from './guards/example-comp/example-comp.compone
 import { ExampleFailCompComponent } from './guards/example-fail-comp/example-fail-comp.component';
 import { DataPassingComponent } from './data-passing/data-passing.component';
 import { RouterEventsComponent } from './router-events/router-events.component';
+import { CustomPreloadingStrategy } from './strategies/custom-preloading-strategy';
 
 // import { AddUserComponent } from './example-modules/user-module/add-user/add-user.component';
 // import { DeleteCategoryComponent } from './example-modules/category-module/delete-category/delete-category.component';
@@ -115,8 +116,10 @@ import { RouterEventsComponent } from './router-events/router-events.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes), // Bu bizim custom oluşturduğumuz route | {useHash:true} ile urlde # ile çaışıyor program
+   
     // HttpClient için eklendi
     HttpClientModule,
+   
     // kural-1453 two-way-data-binding için eklendi
     FormsModule,
     ReactiveFormsModule,
@@ -127,7 +130,8 @@ import { RouterEventsComponent } from './router-events/router-events.component';
   ],
 
   providers: [
-
+    // *21
+    CustomPreloadingStrategy,
     CustomPipe,
     // Comp1Component,
   
